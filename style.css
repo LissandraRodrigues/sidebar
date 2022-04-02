@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --body-bg-color: #dce4e3;
+    --green: #18c29c;
+    --light-green: #8ed7c6;
+    --light-grey: #dce4e3;
+    --text-color: #084236;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+    position: absolute;
+    top: 75px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: flex-end;
+}
+
+nav {
+    position: absolute;
+    width: 85px;
+    height: 100vh;
+    background-color: var(--green);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu {
+    padding-left: 30px;
+}
+
+main {
+    padding-left: 100px;
+    padding-top: 20px;
+    width: 100vw;
+    background-color: var(--body-bg-color);
+}
+
+img.logo {
+    position: absolute;
+    top: 30px;
+    display: none;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked ~ main {
+    padding-left: 270px;
+}
+
+input[type=checkbox]:checked ~ nav {
+    width: 260px;
+}
+
+input[type=checkbox]:checked ~ label {
+    margin-left: 220px;
+}
+
+input[type=checkbox]:checked ~ nav img {
+    display: block;
+}
+
+input[type=checkbox]:checked ~ nav ul li a .icon-text {
+    display: block;
+}
+
+input[type=checkbox]:checked ~ nav ul li a img.icon {
+    margin-right: 15px;
+    
+}
+input[type=checkbox]:checked ~ nav ul li .search {
+    padding: 15px 120px 15px 15px;
+}
+
+input[type=checkbox]:checked ~ nav .log-out .user {
+    display: flex;
+}
+
+.user {
+    display: none;
+}
+
+label {
+    position: absolute;
+    z-index: 1;
+    margin: 30px;
+}
+
+.icon {
+    margin-top: 35px;
+}
+
+.icon-text {
+    display: none;
+}
+
+.search {
+    background-color: var(--light-green);
+    padding: 15px 15px 15px 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -15px;
+}
+
+.search img {
+    margin-top: 0px;
+}
+
+.log-out {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--light-green);
+}
+
+.user-photo {
+    margin-right: 10px;
+}
+
+.user-data h3 {
+    font-size: 15px;
+}
+
+.user-data p {
+    font-size: 12px;
+}
